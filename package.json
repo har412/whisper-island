@@ -1,0 +1,24 @@
+{
+  "name": "whisper-island",
+  "version": "1.0.0",
+  "description": "Dynamic Island AI Dictation Capsule for Windows powered by Groq & Whisper",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:exe": "electron-packager . WhisperIsland --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "keywords": [
+    "electron",
+    "speech-to-text",
+    "groq",
+    "whisper",
+    "windows",
+    "overlay"
+  ],
+  "author": "Harkirat",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-packager": "^17.1.2"
+  }
+}
