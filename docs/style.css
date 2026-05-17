@@ -921,32 +921,115 @@ footer a:hover {
   margin-top: 8px;
 }
 
-/* 10. Responsive Breakpoints */
+/* 10. Responsive Breakpoints & Fluid UX */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
     gap: 16px;
+    text-align: center;
+  }
+  
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
   }
   
   .hero h1 {
-    font-size: 38px;
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    line-height: 1.2;
   }
   
   .subtitle {
     font-size: 15px;
+    padding: 0 10px;
   }
   
   .cta-group {
     flex-direction: column;
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
+    gap: 12px;
+  }
+  
+  .cta-group .btn {
+    width: 100%;
   }
   
   .playground-container {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
   
   .editor-mockup {
-    height: 340px;
+    height: 350px;
+  }
+  
+  .tab-headers {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tab-content-container {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 0 40px;
+  }
+  
+  .section-header h2 {
+    font-size: 28px;
+  }
+  
+  /* Auto-scale the floating capsule simulator to fit tiny viewports (like iPhone SE) */
+  #mock-capsule.mock-expanded {
+    width: 275px;
+    height: 44px;
+    border-radius: 22px;
+  }
+  
+  #mock-capsule.mock-expanded .mock-main-bar {
+    padding: 0 8px;
+  }
+  
+  #mock-status {
+    font-size: 10px;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  #mock-canvas {
+    width: 60px;
+  }
+  
+  .mock-mic {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .mock-mic svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .editor-body {
+    padding: 12px;
+  }
+  
+  .editor-line-numbers {
+    padding-right: 8px;
+  }
+  
+  .tab-content-container {
+    padding: 16px;
+  }
+  
+  pre {
+    padding: 16px;
+    font-size: 11px;
   }
 }
