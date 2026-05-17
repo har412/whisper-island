@@ -21,21 +21,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icon.png">
+  
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- BACKGROUND DECORATIONS -->
-  <div class="glow-bg glow-orange"></div>
-  <div class="glow-bg glow-purple"></div>
+  <div class="glow-wrapper">
+    <div class="glow-bg glow-orange"></div>
+    <div class="glow-bg glow-purple"></div>
+  </div>
 
   <!-- NAVIGATION -->
   <header>
     <div class="nav-container">
       <div class="logo">
-        <span class="logo-dot"></span>
-        <span class="logo-text">Whisper<span>Island</span></span>
+        <img src="icon.png" alt="WhisperIsland Logo" width="28" height="28" style="border-radius: 6px; box-shadow: 0 0 10px rgba(251, 146, 60, 0.4);">
+        <span class="logo-text" style="margin-left: 8px;">Whisper<span>Island</span></span>
       </div>
       <nav>
         <a href="#features">Features</a>

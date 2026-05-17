@@ -123,18 +123,28 @@ function createWindow() {
 
 // Set up System Tray
 function createTray() {
-  // We'll create a simple colored circle nativeImage if the file doesn't exist yet
-  let iconPath = path.join(__dirname, 'src', 'assets', 'icon.png');
-  let trayImage;
+  const iconPath = path.join(__dirname, 'src', 'assets', 'icon.png');
+  const tempIconPath = path.join(app.getPath('userData'), 'tray-icon.png');
 
-  if (fs.existsSync(iconPath)) {
-    trayImage = nativeImage.createFromPath(iconPath).resize({ width: 16, height: 16 });
-  } else {
-    // Fallback: simple 16x16 transparent tray image
-    trayImage = nativeImage.createEmpty();
+  // Copy the icon from ASAR to a physical temp file outside the ASAR archive
+  // so that the Windows Shell (which runs outside Electron) can read and render it in the tray!
+  try {
+    if (fs.existsSync(iconPath)) {
+      fs.writeFileSync(tempIconPath, fs.readFileSync(iconPath));
+    }
+  } catch (err) {
+    console.error('Failed to extract tray icon:', err);
   }
 
-  trayIcon = new Tray(trayImage);
+  // Load the tray from the physical temp file, or fallback to an empty nativeImage
+  let trayImageSource;
+  if (fs.existsSync(tempIconPath)) {
+    trayImageSource = tempIconPath;
+  } else {
+    trayImageSource = nativeImage.createEmpty();
+  }
+
+  trayIcon = new Tray(trayImageSource);
   const contextMenu = Menu.buildFromTemplate([
     { label: 'Show Overlay', click: () => showAndCenterWindow(true) },
     { label: 'Settings', click: () => {
