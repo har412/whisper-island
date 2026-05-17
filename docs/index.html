@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhisperIsland - Dynamic Island AI Dictation Capsule for Windows</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="A premium, glassmorphic, floating speech-to-text utility for Windows powered by Groq & Whisper. Just press a hotkey, speak, and watch your voice instantly type itself anywhere.">
+  <meta name="keywords" content="whisper, speech-to-text, Windows dictation, dynamic island, Groq, AI, open source, productivity">
+  <meta name="author" content="Harkirat">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="WhisperIsland - Dynamic Island AI Dictation for Windows">
+  <meta property="og:description" content="A premium, glassmorphic floating speech-to-text capsule. Press a hotkey, speak, and watch your voice instantly type itself anywhere.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://har412.github.io/whisper-island/">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BACKGROUND DECORATIONS -->
+  <div class="glow-bg glow-orange"></div>
+  <div class="glow-bg glow-purple"></div>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">Whisper<span>Island</span></span>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#demo">Interactive Demo</a>
+        <a href="#install">Install</a>
+        <a href="https://github.com/har412/whisper-island" class="github-link" target="_blank">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          Star on GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="badge">Windows Voice STT Reinvented</div>
+      <h1>Write with your voice.<br><span>Anywhere on Windows.</span></h1>
+      <p class="subtitle">The missing Dynamic Island AI Dictation Capsule. Sits floating and out of your way, transcribing and auto-pasting your speech into any active window or text editor instantly.</p>
+      
+      <!-- CTAs -->
+      <div class="cta-group">
+        <a href="https://github.com/har412/whisper-island/releases/download/v1.0.0/WhisperIslandSetup.exe" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+          </svg>
+          Download Installer (.exe)
+        </a>
+        <a href="https://github.com/har412/whisper-island/releases/download/v1.0.0/WhisperIsland-win32-x64.zip" class="btn btn-secondary">
+          Download Portable ZIP
+        </a>
+      </div>
+      <div class="cta-sub">Stable Version 1.0.0 | Lightweight & Dependency-Free</div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE PLAYGROUND / DEMO -->
+  <section id="demo" class="playground">
+    <div class="section-header">
+      <h2>Experience the Magic</h2>
+      <p>Interact with the live WhisperIsland capsule mockup below to see exactly how it types for you!</p>
+    </div>
+
+    <div class="playground-container">
+      
+      <!-- Live App Simulator Container -->
+      <div class="editor-mockup">
+        
+        <!-- Tab Bar -->
+        <div class="editor-header">
+          <div class="editor-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="editor-tab">claude.ai/chat</div>
+        </div>
+
+        <!-- Float Simulator Overlay -->
+        <div class="simulator-overlay">
+          
+          <!-- Mock Capsule -->
+          <div id="mock-capsule" class="mock-idle">
+            
+            <!-- Drag bar -->
+            <div class="mock-drag"></div>
+            
+            <!-- Sleeping state -->
+            <div class="mock-mini-indicator">
+              <span class="mock-mini-pulse"></span>
+              <span class="mock-mini-label">Dictate</span>
+            </div>
+
+            <!-- Main active bar -->
+            <div class="mock-main-bar">
+              <!-- Mic button -->
+              <button id="mock-mic-btn" class="mock-mic">
+                <div class="mock-glow-ring"></div>
+                <!-- Mic Icon -->
+                <svg class="mock-icon-mic" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
+                </svg>
+                <!-- Stop Icon -->
+                <svg class="mock-icon-stop hidden" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M6 6h12v12H6V6z"/>
+                </svg>
+              </button>
+
+              <!-- Content panel -->
+              <div class="mock-content">
+                <span id="mock-status">Hover to expand capsule</span>
+                <span id="mock-timer" class="hidden">00:00</span>
+                <canvas id="mock-canvas" width="140" height="24" class="hidden"></canvas>
+              </div>
+
+              <!-- Extra Mock Buttons -->
+              <div class="mock-controls">
+                <button class="mock-control-btn active" title="Pinned Always on Top">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                    <path d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2zM9.8 4h4.4v8H9.8V4z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Text area mock editor -->
+        <div class="editor-body">
+          <div class="editor-line-numbers">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+          </div>
+          <div class="editor-content">
+            <textarea id="mock-textarea" readonly placeholder="Click the floating capsule's microphone button above to start dictating..."></textarea>
+            <div id="mock-cursor" class="blinking-cursor"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Panel -->
+      <div class="playground-instructions">
+        <h3>How it Works:</h3>
+        <ul class="instructions-list">
+          <li class="step-1 active">
+            <div class="step-num">1</div>
+            <div><strong>Hover over the capsule</strong> at the top center of the mock window to expand it smoothly.</div>
+          </li>
+          <li class="step-2">
+            <div class="step-num">2</div>
+            <div><strong>Click the glowing microphone button</strong> inside the capsule to begin simulating your speech recording.</div>
+          </li>
+          <li class="step-3">
+            <div class="step-num">3</div>
+            <div><strong>Click it again (to Stop)</strong>. Watch the capsule automatically upload to Groq Whisper and inject the typing action directly into the text editor below!</div>
+          </li>
+        </ul>
+        <button id="trigger-playground-btn" class="btn btn-orange">Launch Auto-Demo! ⚡</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section id="features" class="features">
+    <div class="section-header">
+      <h2>Engineered for Speed & Aesthetics</h2>
+      <p>The first dictation overlay built natively for Windows with standard-setting performance and responsiveness.</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Feature Card 1 -->
+      <div class="feature-card">
+        <div class="feature-icon">🛸</div>
+        <h3>Dynamic Island Capsule</h3>
+        <p>A sleek, breathing, responsive micro-indicator that floats silently at the edge of your screen, blooming smoothly into view only when you need it.</p>
+      </div>
+      <!-- Feature Card 2 -->
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Sub-Second Latency</h3>
+        <p>Powered by Groq Cloud's ultra-low latency Whisper Llama API. Transcribes long paragraphs of spoken text in less than 400 milliseconds.</p>
+      </div>
+      <!-- Feature Card 3 -->
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <h3>Clipboard Protection</h3>
+        <p>Automatically backs up your existing clipboard, writes the transcription to execute paste, and instantly restores your original history in a blink.</p>
+      </div>
+      <!-- Feature Card 4 -->
+      <div class="feature-card">
+        <div class="feature-icon">🎹</div>
+        <h3>Native Keystroke Injection</h3>
+        <p>Utilizes ultra-efficient VBScript keystroke routines combined with physical key release settling. Zero-focus-stealing design works perfectly in all fields.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="comparison">
+    <div class="section-header">
+      <h2>The Windows Dictation Gap</h2>
+      <p>How WhisperIsland completely replaces clunky, slow, or invasive default options.</p>
+    </div>
+    
+    <div class="comparison-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Standard Windows Dictation</th>
+            <th class="highlight">WhisperIsland capsule</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Focus Interface</strong></td>
+            <td>Invasive full-width trays that steal keyboard focus</td>
+            <td class="highlight-cell">Zero-focus-stealing floating dynamic capsule</td>
+          </tr>
+          <tr>
+            <td><strong>STT Latency</strong></td>
+            <td>Laggy, character-by-character buffering (2-4 seconds)</td>
+            <td class="highlight-cell">Ultra-fast sub-second cloud transcription (&lt; 0.5s)</td>
+          </tr>
+          <tr>
+            <td><strong>Clipboard Safety</strong></td>
+            <td>Overwrites your clipboard permanently</td>
+            <td class="highlight-cell">Auto-backs up and fully restores clipboard history</td>
+          </tr>
+          <tr>
+            <td><strong>Cross-Platform</strong></td>
+            <td>Fails or stalls in sandboxed browsers (Chrome/Claude)</td>
+            <td class="highlight-cell">Lightweight VBScript runs flawlessly in 100% of editors</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- INSTALLATION SECTION -->
+  <section id="install" class="install">
+    <div class="section-header">
+      <h2>Simple Setup</h2>
+      <p>Run it in less than 30 seconds using the pre-compiled installer or compile it yourself from source.</p>
+    </div>
+
+    <div class="install-tabs">
+      <div class="tab-headers">
+        <button class="tab-link active" onclick="openTab(event, 'installer')">🚀 Setup Installer</button>
+        <button class="tab-link" onclick="openTab(event, 'portable')">📦 Portable ZIP</button>
+        <button class="tab-link" onclick="openTab(event, 'source')">💻 Build from Source</button>
+      </div>
+
+      <div class="tab-content-container">
+        <!-- Tab 1 -->
+        <div id="installer" class="tab-content active">
+          <h3>The Easiest Way to Install</h3>
+          <p>Download the official pre-compiled installer. It will automatically bundle all files, write registry hooks, and place a launch icon on your Desktop.</p>
+          <a href="https://github.com/har412/whisper-island/releases/download/v1.0.0/WhisperIslandSetup.exe" class="btn btn-orange btn-center">Download WhisperIslandSetup.exe</a>
+        </div>
+        <!-- Tab 2 -->
+        <div id="portable" class="tab-content">
+          <h3>No Installation Required</h3>
+          <p>Prefer to run the application portable without writing files to your hard drive? Grab the standalone zip asset, extract it, and launch!</p>
+          <a href="https://github.com/har412/whisper-island/releases/download/v1.0.0/WhisperIsland-win32-x64.zip" class="btn btn-orange btn-center">Download WhisperIsland-win32-x64.zip</a>
+        </div>
+        <!-- Tab 3 -->
+        <div id="source" class="tab-content">
+          <h3>Build & Hack the Code</h3>
+          <p>WhisperIsland is 100% open source. Clone, modify, and build it natively on your machine:</p>
+          <pre><code><span class="cmd-line"># 1. Clone the repository</span>
+git clone https://github.com/har412/whisper-island.git
+
+<span class="cmd-line"># 2. Go to project and install dependencies</span>
+cd whisper-island
+npm install
+
+<span class="cmd-line"># 3. Launch application</span>
+npm start
+
+<span class="cmd-line"># 4. Compile standalone Windows exe</span>
+npm run build:exe</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2026 WhisperIsland. Created with 💜 by <a href="https://github.com/har412" target="_blank">Harkirat</a>.</p>
+      <p class="footer-sub">Released under the MIT License. Feel free to contribute on GitHub! ⭐</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="app.js"></script>
+</body>
+</html>
