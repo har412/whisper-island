@@ -3,6 +3,7 @@
 > **The missing Dynamic Island AI Dictation Capsule for Windows.** A premium, glassmorphic, floating speech-to-text utility powered by Groq & OpenAI Whisper. Just press a hotkey, speak, and watch your voice instantly type itself anywhere.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
+[![Downloads](https://img.shields.io/github/downloads/har412/whisper-island/total.svg?style=flat-ui&color=orange)](https://github.com/har412/whisper-island/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-ui)](http://makeapullrequest.com)
 [![Platform: Windows](https://img.shields.io/badge/Platform-Windows-blue.svg)](https://microsoft.com/windows)
 
