@@ -1,4 +1,4 @@
-# 🔮 WhisperIsland
+#  WhisperIsland
 
 > **The missing Dynamic Island AI Dictation Capsule for Windows.** A premium, glassmorphic, floating speech-to-text utility powered by Groq & OpenAI Whisper. Just press a hotkey, speak, and watch your voice instantly type itself anywhere.
 
