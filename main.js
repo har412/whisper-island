@@ -3,6 +3,9 @@ const path = require('path');
 const fs = require('fs');
 const { exec } = require('child_process');
 
+// Handle Squirrel installation, uninstallation, and desktop shortcut events for Windows
+if (require('electron-squirrel-startup')) return;
+
 // Configuration management
 const configPath = path.join(app.getPath('userData'), 'config.json');
 let config = {

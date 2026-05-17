@@ -8,15 +8,20 @@
 
 ---
 
-## 📥 Standalone Download (No Setup Required!)
+## 📥 Download & Install
 
-Don't want to deal with command lines, code, or installing Node.js? You can download the pre-compiled standalone application and run it instantly!
+Don't want to deal with command lines, code, or installing Node.js? You can download the app and install it instantly on Windows!
 
+### 🚀 Option 1: Windows Setup Installer (Recommended)
 1. Go to the [**WhisperIsland Releases Page**](https://github.com/har412/whisper-island/releases/latest).
-2. Download the `WhisperIsland-win32-x64.zip` file.
-3. Extract the ZIP folder anywhere on your computer.
-4. Double-click **`WhisperIsland.exe`** to start dictating instantly!
-*(Optional: Right-click `WhisperIsland.exe` ➡️ "Send to" ➡️ "Desktop" to create a desktop shortcut).*
+2. Download **`WhisperIslandSetup.exe`**.
+3. Double-click the installer. It will automatically compile the files, install them cleanly on your system, and place a beautiful **WhisperIsland** launcher icon directly on your **Windows Desktop** and inside your **Start Menu**!
+
+### 📦 Option 2: Standalone Portable ZIP
+If you prefer a portable version that runs without installing anything on your hard drive:
+1. Download **`WhisperIsland-win32-x64.zip`** from the releases page.
+2. Extract the ZIP folder anywhere on your computer.
+3. Double-click **`WhisperIsland.exe`** inside the extracted folder to start dictating instantly!
 
 ---
 

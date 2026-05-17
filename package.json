@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build:exe": "electron-packager . WhisperIsland --platform=win32 --arch=x64 --out=dist --overwrite"
+    "build:exe": "electron-packager . WhisperIsland --platform=win32 --arch=x64 --out=dist --overwrite",
+    "build:installer": "node create-installer.js"
   },
   "keywords": [
     "electron",
@@ -19,6 +20,10 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^30.0.0",
-    "electron-packager": "^17.1.2"
+    "electron-packager": "^17.1.2",
+    "electron-winstaller": "^5.4.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
   }
 }
