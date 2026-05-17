@@ -8,6 +8,18 @@
 
 ---
 
+## 📥 Standalone Download (No Setup Required!)
+
+Don't want to deal with command lines, code, or installing Node.js? You can download the pre-compiled standalone application and run it instantly!
+
+1. Go to the [**WhisperIsland Releases Page**](https://github.com/har412/whisper-island/releases/latest).
+2. Download the `WhisperIsland-win32-x64.zip` file.
+3. Extract the ZIP folder anywhere on your computer.
+4. Double-click **`WhisperIsland.exe`** to start dictating instantly!
+*(Optional: Right-click `WhisperIsland.exe` ➡️ "Send to" ➡️ "Desktop" to create a desktop shortcut).*
+
+---
+
 ## ⚡ The Problem & The Solution
 
 On macOS, users have access to gorgeous, minimalist dictation tools like *Superwhisper* or *MacWhisper*. On Windows, the options have been clunky, slow, or invasive. 
@@ -141,4 +153,4 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ---
 
-*Created with 💜 by [Harkirat](https://github.com/harkirat).*
+*Created with 💜 by [Harkirat](https://github.com/har412).*
